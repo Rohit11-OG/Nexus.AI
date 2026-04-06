@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=NEXUS.AI%20%7C%20V2%20ULTRA%20CRAZY&fontAlign=50&fontAlignY=40&color=0:ff0080,25:7928ca,50:2afadf,75:00c6ff,100:005bea&fontColor=ffffff&animation=blinking" alt="Nexus AI Ultra Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=Nexus.AI&fontAlign=50&fontAlignY=40&color=0:ff0080,25:7928ca,50:2afadf,75:00c6ff,100:005bea&fontColor=ffffff&animation=blinking" alt="Nexus AI Ultra Header" />
 </p>
 
 <p align="center">
