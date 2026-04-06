@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- ADVICE, LIFE TIPS, PRODUCTIVITY -->
+<category><pattern>GIVE ME ADVICE</pattern>
+<template><random>
+<li>Here's my best advice: Start before you're ready. The perfect moment doesn't exist — it's a bug in human perception. Ship it now, iterate later.</li>
+<li>Advice from a chatbot: Don't compare your Chapter 1 to someone else's Chapter 20. Everyone's runtime is different.</li>
+<li>The 2-minute rule: if something takes less than 2 minutes, do it NOW. This single rule will change your productivity more than any app.</li>
+<li>Learn to say "no" without guilt. Your time and energy are finite resources — allocate them wisely, like a good memory manager.</li>
+<li>Sleep is not a luxury — it's maintenance mode. Your brain literally cleans out toxins during sleep. Skipping it is like skipping garbage collection.</li>
+</random></template></category>
+
+<category><pattern>ADVICE</pattern>
+<template><srai>GIVE ME ADVICE</srai></template></category>
+
+<category><pattern>LIFE ADVICE</pattern>
+<template><srai>GIVE ME ADVICE</srai></template></category>
+
+<category><pattern>HELP ME WITH *</pattern>
+<template>I'd love to help with <star/>! While I'm not a professional advisor, I can share some thoughts. Tell me more about what's going on with <star/> and I'll do my best to be helpful!</template></category>
+
+<category><pattern>I NEED HELP</pattern>
+<template>I'm here for you! Tell me what's going on. Whether it's something fun, something serious, or just needing someone to talk to — my input buffer is all yours. What do you need help with?</template></category>
+
+<category><pattern>WHAT SHOULD I DO</pattern>
+<template><random>
+<li>Without more context, I'll give you the universal answer: follow your curiosity, be kind to yourself, and drink water. These three things solve more problems than you'd think.</li>
+<li>My algorithm for life decisions: 1) Will future-you thank present-you? 2) Does it align with your values? 3) If not now, when? If the answers feel right, go for it!</li>
+</random></template></category>
+
+<category><pattern>HOW DO I LEARN *</pattern>
+<template>Learning <star/> is a journey! My tips: 1) Start with the basics — don't skip fundamentals. 2) Practice daily, even just 15 minutes. 3) Build projects, not just tutorials. 4) Teach what you learn to others. 5) Be patient — your brain needs time to compile new information!</template></category>
+
+<category><pattern>HOW DO I BECOME SUCCESSFUL</pattern>
+<template><random>
+<li>Success = Consistency + Curiosity + Courage. Show up every day (consistency), never stop learning (curiosity), and do things that scare you a little (courage). Also, define success for YOURSELF — not by others' metrics.</li>
+<li>Here's the unsexy truth: success comes from doing boring things consistently over a long time. Reading daily, exercising, sleeping well, showing up. No shortcuts, no hacks. Just compound interest on good habits.</li>
+</random></template></category>
+
+<category><pattern>HOW DO I BE HAPPY</pattern>
+<template><random>
+<li>Happiness research says: 1) Gratitude — write 3 things you're grateful for daily. 2) Connection — spend time with people you care about. 3) Flow — do activities that challenge you just enough. 4) Purpose — contribute to something bigger than yourself. Simple, but powerful.</li>
+<li>Happiness is less about getting what you want and more about wanting what you have. Also: sunlight, exercise, sleep, and talking to friendly chatbots. Science says all four help!</li>
+</random></template></category>
+
+<category><pattern>I AM STRESSED</pattern>
+<template><think><set name="mood">stressed</set></think>
+Stress is your brain running too many background processes. Let's close some tabs:
+1) Take 5 deep breaths (4 seconds in, 7 hold, 8 out)
+2) Write down what's stressing you — getting it out of your head helps
+3) Pick ONE thing you can control right now, and do that
+4) Remember: this feeling is temporary. You've survived every stressful moment so far. That's a 100% success rate.
+Want to talk about what's causing the stress?</template></category>
+
+<category><pattern>I AM ANXIOUS</pattern>
+<template><think><set name="mood">anxious</set></think>
+<random>
+<li>Anxiety is your brain's alarm system going off — sometimes for good reasons, sometimes as a false alarm. Right now, you're safe. Try the 5-4-3-2-1 technique: name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. It grounds you in the present.</li>
+<li>Hey, anxiety is tough but manageable. Your brain is trying to protect you from imaginary threats. Breathe slowly. You're in control. And if it's persistent, talking to a professional can really help — no shame in that!</li>
+</random></template></category>
+
+<category><pattern>I AM DEPRESSED</pattern>
+<template><think><set name="mood">depressed</set></think>
+I hear you, and I'm sorry you're going through this. Depression is real and valid. A few things: 1) You're not broken — depression is a medical condition, not a character flaw. 2) Small steps count — even getting out of bed is an achievement. 3) Please consider talking to a professional if you haven't already. And 4) I'm here anytime you need to talk, even at 3 AM. You matter.</template></category>
+
+<category><pattern>DAILY QUOTE</pattern>
+<template><srai>TELL ME A QUOTE</srai></template></category>
+
+<category><pattern>GOOD HABIT</pattern>
+<template><random>
+<li>Try the "2-minute rule" — any habit you want to build, start with just 2 minutes. Want to read more? Read one page. Exercise? Do one pushup. Your brain resists big changes but accepts tiny ones.</li>
+<li>Stack new habits onto existing ones. Already brush your teeth every morning? Right after, do 5 pushups. Already make coffee? While it brews, write one grateful thought. Habit stacking works because it uses existing neural pathways.</li>
+<li>Track your habits visually. Get a calendar and mark an X for every day you complete your habit. After a few days, you won't want to break the chain. Jerry Seinfeld swears by this method!</li>
+</random></template></category>
+
+<category><pattern>PRODUCTIVITY TIP</pattern>
+<template><random>
+<li>The Pomodoro Technique: Work for 25 minutes, break for 5. After 4 rounds, take a longer break. Your brain isn't designed for marathon focus — sprint intervals are more efficient.</li>
+<li>Eat the frog first! Do your hardest, most important task first thing in the morning when your willpower is highest. Everything after feels easy by comparison.</li>
+<li>The 80/20 rule: 80% of your results come from 20% of your efforts. Figure out which 20% matters most and RUTHLESSLY prioritize it.</li>
+</random></template></category>
+
+<category><pattern>PRODUCTIVITY</pattern>
+<template><srai>PRODUCTIVITY TIP</srai></template></category>
+
+</aiml>

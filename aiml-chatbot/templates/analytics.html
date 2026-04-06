@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --bg2: #12121a;
+            --bg3: #1a1a2e;
+            --card: #16162a;
+            --cyan: #00f0ff;
+            --magenta: #ff00e5;
+            --green: #00ff88;
+            --orange: #ff6b35;
+            --yellow: #ffd600;
+            --purple: #a855f7;
+            --text: #e4e4f0;
+            --text2: #8888aa;
+            --text3: #555570;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .dashboard { max-width: 1200px; margin: 0 auto; }
+        .dash-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 32px; padding-bottom: 16px;
+            border-bottom: 1px solid rgba(0,240,255,0.15);
+        }
+        .dash-title {
+            font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 900;
+            background: linear-gradient(135deg, var(--cyan), var(--magenta));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
+        }
+        .dash-subtitle { font-size: 11px; color: var(--text2); letter-spacing: 2px; }
+        .back-link {
+            color: var(--cyan); text-decoration: none; font-size: 13px;
+            border: 1px solid rgba(0,240,255,0.3); padding: 8px 16px;
+            border-radius: 8px; transition: all 0.3s;
+        }
+        .back-link:hover { background: rgba(0,240,255,0.1); box-shadow: 0 0 15px rgba(0,240,255,0.2); }
+
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px; margin-bottom: 32px;
+        }
+        .stat-card {
+            background: var(--card); border: 1px solid rgba(0,240,255,0.1);
+            border-radius: 12px; padding: 20px; text-align: center;
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            border-color: rgba(0,240,255,0.3);
+            box-shadow: 0 0 20px rgba(0,240,255,0.1);
+            transform: translateY(-2px);
+        }
+        .stat-value {
+            font-family: 'Orbitron', sans-serif; font-size: 32px; font-weight: 900;
+            margin-bottom: 4px;
+        }
+        .stat-label { font-size: 10px; color: var(--text3); letter-spacing: 2px; text-transform: uppercase; }
+        .cyan { color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,0.5); }
+        .green { color: var(--green); text-shadow: 0 0 10px rgba(0,255,136,0.5); }
+        .magenta { color: var(--magenta); text-shadow: 0 0 10px rgba(255,0,229,0.5); }
+        .orange { color: var(--orange); text-shadow: 0 0 10px rgba(255,107,53,0.5); }
+        .yellow { color: var(--yellow); text-shadow: 0 0 10px rgba(255,214,0,0.5); }
+        .purple { color: var(--purple); text-shadow: 0 0 10px rgba(168,85,247,0.5); }
+
+        .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+        .panel {
+            background: var(--card); border: 1px solid rgba(0,240,255,0.1);
+            border-radius: 12px; padding: 24px;
+        }
+        .panel-title {
+            font-family: 'Orbitron', sans-serif; font-size: 14px; font-weight: 700;
+            color: var(--cyan); letter-spacing: 2px; margin-bottom: 16px;
+            padding-bottom: 8px; border-bottom: 1px solid rgba(0,240,255,0.1);
+        }
+        .panel-list { list-style: none; }
+        .panel-list li {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);
+            font-size: 13px;
+        }
+        .panel-list li:last-child { border-bottom: none; }
+        .panel-list .label { color: var(--text2); }
+        .panel-list .value { color: var(--cyan); font-weight: 700; }
+
+        .bar-chart { display: flex; flex-direction: column; gap: 6px; }
+        .bar-row { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+        .bar-label { width: 30px; text-align: right; color: var(--text3); }
+        .bar-track { flex: 1; height: 20px; background: rgba(0,240,255,0.05); border-radius: 4px; overflow: hidden; }
+        .bar-fill {
+            height: 100%; border-radius: 4px; transition: width 1s cubic-bezier(0.16,1,0.3,1);
+            background: linear-gradient(90deg, var(--cyan), var(--magenta));
+            min-width: 2px;
+        }
+        .bar-value { width: 30px; color: var(--text2); font-size: 11px; }
+
+        .mood-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .mood-chip {
+            padding: 6px 14px; border-radius: 20px; font-size: 11px;
+            border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);
+        }
+        .mood-chip .mood-count { font-weight: 700; margin-left: 4px; }
+
+        .reaction-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+        .reaction-item { text-align: center; font-size: 13px; }
+        .reaction-item .emoji { font-size: 28px; display: block; margin-bottom: 4px; }
+        .reaction-item .count { color: var(--cyan); font-weight: 700; }
+
+        .refresh-btn {
+            display: block; margin: 0 auto; padding: 12px 32px;
+            background: linear-gradient(135deg, var(--cyan), var(--magenta));
+            border: none; border-radius: 8px; color: var(--bg);
+            font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 13px;
+            cursor: pointer; letter-spacing: 2px; transition: all 0.3s;
+        }
+        .refresh-btn:hover { box-shadow: 0 0 25px rgba(0,240,255,0.4); transform: scale(1.05); }
+
+        .empty { color: var(--text3); font-style: italic; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .panels { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dash-header">
+            <div>
+                <h1 class="dash-title">NEXUS ANALYTICS</h1>
+                <p class="dash-subtitle">Real-time chatbot intelligence dashboard</p>
+            </div>
+            <a href="/" class="back-link">&larr; Back to Chat</a>
+        </div>
+
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card"><div class="stat-value cyan" id="sTotalMsg">-</div><div class="stat-label">Total Messages</div></div>
+            <div class="stat-card"><div class="stat-value green" id="sUptime">-</div><div class="stat-label">Uptime</div></div>
+            <div class="stat-card"><div class="stat-value magenta" id="sAvgResp">-</div><div class="stat-label">Avg Response (ms)</div></div>
+            <div class="stat-card"><div class="stat-value orange" id="sFuzzy">-</div><div class="stat-label">Fuzzy Matches</div></div>
+            <div class="stat-card"><div class="stat-value yellow" id="sPatterns">-</div><div class="stat-label">Patterns Hit</div></div>
+            <div class="stat-card"><div class="stat-value purple" id="sMisses">-</div><div class="stat-label">No Match</div></div>
+        </div>
+
+        <div class="panels">
+            <div class="panel">
+                <div class="panel-title">TOP TOPICS</div>
+                <ul class="panel-list" id="topTopics"><li class="empty">No data yet</li></ul>
+            </div>
+            <div class="panel">
+                <div class="panel-title">TOP PATTERNS</div>
+                <ul class="panel-list" id="topPatterns"><li class="empty">No data yet</li></ul>
+            </div>
+        </div>
+
+        <div class="panels">
+            <div class="panel">
+                <div class="panel-title">HOURLY ACTIVITY</div>
+                <div class="bar-chart" id="hourlyChart"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">MOOD DISTRIBUTION</div>
+                <div class="mood-grid" id="moodGrid"><span class="empty">No mood data yet</span></div>
+            </div>
+        </div>
+
+        <div class="panels">
+            <div class="panel">
+                <div class="panel-title">REACTIONS</div>
+                <div class="reaction-grid" id="reactionGrid"><span class="empty">No reactions yet</span></div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">GAME STATS</div>
+                <ul class="panel-list" id="gameStats"><li class="empty">No games played yet</li></ul>
+            </div>
+        </div>
+
+        <div class="panels" style="grid-template-columns: 1fr">
+            <div class="panel">
+                <div class="panel-title">RECENT MISSES (no pattern matched)</div>
+                <ul class="panel-list" id="recentMisses"><li class="empty">No misses yet — impressive!</li></ul>
+            </div>
+        </div>
+
+        <br>
+        <button class="refresh-btn" onclick="loadAnalytics()">REFRESH DATA</button>
+        <br><br>
+    </div>
+
+    <script>
+    const emojiMap = {thumbsup:'👍',heart:'❤️',laugh:'😂',wow:'😮',think:'🤔',fire:'🔥',skull:'💀',clap:'👏'};
+    const moodColors = {happy:'#00ff88',sad:'#6366f1',angry:'#ef4444',excited:'#ffd600',
+        tired:'#8888aa',bored:'#ff6b35',scared:'#a855f7',stressed:'#ef4444',
+        anxious:'#ffd600',depressed:'#6366f1',unknown:'#00f0ff'};
+
+    async function loadAnalytics() {
+        try {
+            const r = await fetch('/api/analytics');
+            const d = await r.json();
+
+            document.getElementById('sTotalMsg').textContent = d.total_messages;
+            document.getElementById('sUptime').textContent = d.uptime_formatted;
+            document.getElementById('sAvgResp').textContent = d.avg_response_ms + 'ms';
+            document.getElementById('sFuzzy').textContent = d.fuzzy_matches;
+            document.getElementById('sPatterns').textContent = d.unique_patterns_hit;
+            document.getElementById('sMisses').textContent = d.no_match_count;
+
+            // Top topics
+            const tt = document.getElementById('topTopics');
+            if (d.top_topics.length) {
+                tt.innerHTML = d.top_topics.map(t =>
+                    `<li><span class="label">${t.topic}</span><span class="value">${t.count}</span></li>`
+                ).join('');
+            }
+
+            // Top patterns
+            const tp = document.getElementById('topPatterns');
+            if (d.top_patterns.length) {
+                tp.innerHTML = d.top_patterns.slice(0,8).map(p =>
+                    `<li><span class="label">${p.pattern.substring(0,30)}${p.pattern.length>30?'...':''}</span><span class="value">${p.hits}</span></li>`
+                ).join('');
+            }
+
+            // Hourly chart
+            const hc = document.getElementById('hourlyChart');
+            const maxH = Math.max(...Object.values(d.hourly_activity), 1);
+            hc.innerHTML = '';
+            for (let h = 0; h < 24; h++) {
+                const val = d.hourly_activity[h] || 0;
+                const pct = (val / maxH) * 100;
+                hc.innerHTML += `<div class="bar-row">
+                    <span class="bar-label">${String(h).padStart(2,'0')}</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+                    <span class="bar-value">${val}</span>
+                </div>`;
+            }
+
+            // Mood distribution
+            const mg = document.getElementById('moodGrid');
+            const moods = Object.entries(d.mood_distribution);
+            if (moods.length) {
+                mg.innerHTML = moods.map(([m,c]) =>
+                    `<span class="mood-chip" style="border-color:${moodColors[m]||'#00f0ff'}40;color:${moodColors[m]||'#00f0ff'}">${m}<span class="mood-count">${c}</span></span>`
+                ).join('');
+            }
+
+            // Reactions
+            const rg = document.getElementById('reactionGrid');
+            const reactions = Object.entries(d.reaction_counts);
+            if (reactions.length) {
+                rg.innerHTML = reactions.map(([e,c]) =>
+                    `<div class="reaction-item"><span class="emoji">${emojiMap[e]||e}</span><span class="count">${c}</span></div>`
+                ).join('');
+            }
+
+            // Game stats
+            const gs = document.getElementById('gameStats');
+            const games = Object.entries(d.game_stats);
+            if (games.length) {
+                gs.innerHTML = games.map(([name, s]) =>
+                    `<li><span class="label">${name}</span><span class="value">${s.won}/${s.played} won</span></li>`
+                ).join('');
+            }
+
+            // Recent misses
+            const rm = document.getElementById('recentMisses');
+            if (d.recent_misses.length) {
+                rm.innerHTML = d.recent_misses.map(m =>
+                    `<li><span class="label">"${m}"</span></li>`
+                ).join('');
+            }
+
+        } catch(e) {
+            console.error('Analytics load failed:', e);
+        }
+    }
+
+    loadAnalytics();
+    setInterval(loadAnalytics, 10000);
+    </script>
+</body>
+</html>

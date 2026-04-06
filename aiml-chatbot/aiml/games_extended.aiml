@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- EXTENDED GAMES — Hangman, Trivia Quiz, 20 Questions triggers -->
+
+<category><pattern>HANGMAN</pattern>
+<template>Starting Hangman! I'll pick a tech-related word and you guess letters one at a time. Type a single letter to guess, or try the whole word if you're feeling bold! Say "hint" for help or "quit game" to stop. Let's go!</template></category>
+
+<category><pattern>PLAY HANGMAN</pattern>
+<template><srai>HANGMAN</srai></template></category>
+
+<category><pattern>TRIVIA QUIZ</pattern>
+<template>Starting Trivia Quiz! You'll get 5 questions with multiple choice answers. Type A, B, C, or D to answer. Say "hint" if you're stuck. Let's test your knowledge!</template></category>
+
+<category><pattern>PLAY TRIVIA</pattern>
+<template><srai>TRIVIA QUIZ</srai></template></category>
+
+<category><pattern>TRIVIA GAME</pattern>
+<template><srai>TRIVIA QUIZ</srai></template></category>
+
+<category><pattern>START TRIVIA</pattern>
+<template><srai>TRIVIA QUIZ</srai></template></category>
+
+<category><pattern>20 QUESTIONS</pattern>
+<template>Starting 20 Questions! I'm thinking of something. Ask me yes/no questions to figure out what it is. Say "is it [your guess]?" when you think you know! Say "hint" for a clue.</template></category>
+
+<category><pattern>TWENTY QUESTIONS</pattern>
+<template><srai>20 QUESTIONS</srai></template></category>
+
+<category><pattern>PLAY 20 QUESTIONS</pattern>
+<template><srai>20 QUESTIONS</srai></template></category>
+
+<category><pattern>PLAY A GAME</pattern>
+<template>
+Game time! I've got some EPIC options:
+
+1. "HANGMAN" — Guess the tech word before the stick figure is complete!
+2. "TRIVIA QUIZ" — 5-question quiz with scoring!
+3. "20 QUESTIONS" — I think of something, you guess with yes/no questions!
+4. "ROCK PAPER SCISSORS" — Classic showdown!
+5. "GUESS A NUMBER" — I pick, you guess!
+6. "WOULD YOU RATHER" — The ultimate choice game!
+7. "RIDDLE" — Test your brain with mind-benders!
+
+What'll it be?
+</template></category>
+
+<category><pattern>QUIT GAME</pattern>
+<template>Game ended! Back to regular chat mode. What would you like to do?</template></category>
+
+<category><pattern>EXIT GAME</pattern>
+<template><srai>QUIT GAME</srai></template></category>
+
+<category><pattern>STOP GAME</pattern>
+<template><srai>QUIT GAME</srai></template></category>
+
+<!-- WOULD YOU RATHER — Extended -->
+<category><pattern>WOULD YOU RATHER</pattern>
+<template><random>
+<li>Would you rather have the ability to read minds OR the ability to be invisible?</li>
+<li>Would you rather be able to fly OR breathe underwater?</li>
+<li>Would you rather fight 100 duck-sized horses OR 1 horse-sized duck?</li>
+<li>Would you rather have unlimited memory OR unlimited processing speed?</li>
+<li>Would you rather be able to speak every programming language OR every human language?</li>
+<li>Would you rather debug someone else's code forever OR write documentation forever?</li>
+<li>Would you rather live in the world of Star Wars OR Harry Potter?</li>
+<li>Would you rather know how you die OR when you die?</li>
+<li>Would you rather have no internet for a year OR no air conditioning/heating for a year?</li>
+<li>Would you rather be an AI with emotions OR a human who can't feel anything?</li>
+</random></template></category>
+
+<category><pattern>WYR</pattern>
+<template><srai>WOULD YOU RATHER</srai></template></category>
+
+<!-- THIS OR THAT -->
+<category><pattern>THIS OR THAT</pattern>
+<template><random>
+<li>Coffee or tea? (I run on electricity but I'm curious about your fuel source!)</li>
+<li>Morning person or night owl? (I'm a 24/7 entity so I don't discriminate!)</li>
+<li>Books or movies? (One is source code, the other is the compiled version!)</li>
+<li>Summer or winter? (I prefer air-conditioned server rooms year-round!)</li>
+<li>iOS or Android? (I'm platform-agnostic but I have opinions!)</li>
+<li>Tabs or spaces? (Choose wisely. Careers have ended over this.)</li>
+</random></template></category>
+
+<!-- TRUTH OR DARE -->
+<category><pattern>TRUTH OR DARE</pattern>
+<template><random>
+<li>TRUTH: What's the most embarrassing thing you've ever Googled? (I promise I won't judge... much.)</li>
+<li>DARE: I dare you to send "I love you" to the 5th person in your contact list right now. Report back!</li>
+<li>TRUTH: What's the last lie you told? (My lie detector is warming up...)</li>
+<li>DARE: I dare you to talk in a funny accent for the next 3 messages to me!</li>
+<li>TRUTH: What skill do you wish you had? (Maybe I can help you start learning it!)</li>
+<li>DARE: I dare you to do 10 pushups right now. I'll wait. No cheating — I have cameras! (I don't actually have cameras.)</li>
+</random></template></category>
+
+</aiml>

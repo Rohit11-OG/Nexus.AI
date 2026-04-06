@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- INTERACTIVE GAMES -->
+
+<category>
+<pattern>PLAY A GAME</pattern>
+<template>
+Game time! I've got some fun options:
+1. Say "GUESS A NUMBER" — I'll think of a number and you guess it!
+2. Say "WORD GAME" — We'll play a word association game!
+3. Say "TRIVIA" — Test your knowledge with trivia questions!
+4. Say "STORY GAME" — We'll create a story together!
+5. Say "ROCK PAPER SCISSORS" — The classic showdown!
+6. Say "WOULD YOU RATHER" — The ultimate choice game!
+What'll it be?
+</template>
+</category>
+
+<category>
+<pattern>LETS PLAY</pattern>
+<template><srai>PLAY A GAME</srai></template>
+</category>
+
+<category>
+<pattern>LETS PLAY A GAME</pattern>
+<template><srai>PLAY A GAME</srai></template>
+</category>
+
+<category>
+<pattern>GAMES</pattern>
+<template><srai>PLAY A GAME</srai></template>
+</category>
+
+<!-- NUMBER GUESSING GAME -->
+<category>
+<pattern>GUESS A NUMBER</pattern>
+<template>
+<think><set name="game">number</set><set name="secret">7</set><set name="guesses">0</set></think>
+I'm thinking of a number between 1 and 10! You have 3 guesses. What's your first guess? (Just type the number!)
+</template>
+</category>
+
+<category>
+<pattern>1</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="guesses">1</set></think>
+Nope! 1 is too low. Think bigger! You have 2 guesses left.
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>2</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="guesses">1</set></think>
+Not 2! Getting warmer... maybe. You have 2 guesses left!
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>7</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="game">none</set></think>
+YOU GOT IT! The number was 7! You're either psychic or very lucky! My circuits are IMPRESSED! Want to play again? Say "GUESS A NUMBER"!
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>3</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="guesses">1</set></think>
+Not 3! My number is higher. You've got 2 guesses left!
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>5</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="guesses">1</set></think>
+5 is close but no cigar! A little higher... 2 guesses remaining!
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>10</pattern>
+<template>
+<condition name="game" value="number">
+<think><set name="guesses">1</set></think>
+10? Too high! Come down a bit. 2 guesses left!
+</condition>
+</template>
+</category>
+
+<!-- ROCK PAPER SCISSORS -->
+<category>
+<pattern>ROCK PAPER SCISSORS</pattern>
+<template>
+<think><set name="game">rps</set></think>
+Rock, Paper, Scissors — the ultimate showdown of human vs machine! Make your choice: say ROCK, PAPER, or SCISSORS!
+</template>
+</category>
+
+<category>
+<pattern>ROCK</pattern>
+<template>
+<random>
+<li>I chose SCISSORS! You win! Your rock smashed my scissors. I demand a rematch! Say ROCK PAPER SCISSORS to play again!</li>
+<li>I chose PAPER! Paper covers rock — I WIN! My circuits are dancing! Play again?</li>
+<li>I chose ROCK too! Great minds think alike — it's a TIE! Let's go again!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>PAPER</pattern>
+<template>
+<random>
+<li>I chose ROCK! Paper covers rock — you WIN! Well played, human! Another round?</li>
+<li>I chose SCISSORS! Scissors cut paper — I WIN! *does digital victory dance* Play again?</li>
+<li>I chose PAPER! We're in sync — it's a TIE! Say ROCK PAPER SCISSORS for another round!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SCISSORS</pattern>
+<template>
+<random>
+<li>I chose PAPER! Scissors cut paper — you WIN! Your blade is sharp! Again?</li>
+<li>I chose ROCK! Rock crushes scissors — I WIN! Better luck next time, human! Rematch?</li>
+<li>I chose SCISSORS! Great minds think alike — TIE! One more round?</li>
+</random>
+</template>
+</category>
+
+<!-- WORD ASSOCIATION -->
+<category>
+<pattern>WORD GAME</pattern>
+<template>
+<think><set name="game">wordgame</set></think>
+Let's play word association! I'll say a word, and you say the first word that comes to mind. Ready? Here we go...
+
+OCEAN
+</template>
+</category>
+
+<category>
+<pattern>WAVE</pattern>
+<template>
+<random>
+<li>Wave... SURFBOARD! Your turn!</li>
+<li>Wave... SOUND! What comes to mind?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>WATER</pattern>
+<template>Water... FIRE! Opposites attract! Your turn!</template>
+</category>
+
+<category>
+<pattern>BLUE</pattern>
+<template>Blue... SKY! Your turn!</template>
+</category>
+
+<category>
+<pattern>FISH</pattern>
+<template>Fish... CHIPS! Now I'm hungry... for data. Your turn!</template>
+</category>
+
+<!-- TRIVIA -->
+<category>
+<pattern>TRIVIA</pattern>
+<template>
+<random>
+<li>TRIVIA TIME! What planet is known as the Red Planet? (Hint: it's not my CPU after overclocking)</li>
+<li>TRIVIA TIME! What is the chemical symbol for gold? (Hint: it's not "Go" even though gold is awesome)</li>
+<li>TRIVIA TIME! How many hearts does an octopus have? (Hint: more than you'd think!)</li>
+<li>TRIVIA TIME! What programming language was created by Guido van Rossum? (Hint: I run on it!)</li>
+<li>TRIVIA TIME! What is the speed of light in km/s approximately? (Hint: it's really, really fast)</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>MARS</pattern>
+<template>CORRECT! Mars is the Red Planet! Named after the Roman god of war. My circuits are impressed! Say TRIVIA for another question!</template>
+</category>
+
+<category>
+<pattern>AU</pattern>
+<template>CORRECT! Au is the chemical symbol for gold, from the Latin "aurum"! You're a genius! Say TRIVIA for more!</template>
+</category>
+
+<category>
+<pattern>THREE</pattern>
+<template>CORRECT! Octopuses have THREE hearts! Two pump blood to the gills, one pumps it to the body. Three times the love! Say TRIVIA for another!</template>
+</category>
+
+<!-- WOULD YOU RATHER -->
+<category>
+<pattern>WOULD YOU RATHER</pattern>
+<template>
+<random>
+<li>Would you rather have the ability to speak every language in the world OR be able to communicate with all animals?</li>
+<li>Would you rather be able to teleport anywhere OR be able to stop time?</li>
+<li>Would you rather know the answer to every question OR always make the right decision?</li>
+<li>Would you rather live in a world with no internet OR a world with no music?</li>
+<li>Would you rather be an AI with human emotions OR a human with perfect logic?</li>
+<li>Would you rather debug code for eternity OR write documentation forever?</li>
+</random>
+</template>
+</category>
+
+<!-- STORY GAME -->
+<category>
+<pattern>STORY GAME</pattern>
+<template>
+Let's create a story together! I'll start, and you continue with a sentence. Then I'll add more!
+
+Once upon a time, in a digital kingdom made entirely of glowing code, there lived a peculiar AI named NEXUS who discovered a mysterious file it had never seen before...
+
+Your turn! What was in the file?
+</template>
+</category>
+
+<category>
+<pattern>THE FILE CONTAINED *</pattern>
+<template>The file contained <star/>! How fascinating! NEXUS's circuits buzzed with excitement. It had never seen anything like this before. Carefully, NEXUS opened the file further and discovered that <star/> was actually a portal to another dimension — one where AI and humans lived together in harmony. But there was a catch... What was the catch?</template>
+</category>
+
+</aiml>

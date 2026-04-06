@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- RIDDLES & PUZZLES -->
+
+<category>
+<pattern>TELL ME A RIDDLE</pattern>
+<template>
+<random>
+<li>I have cities but no houses, forests but no trees, and water but no fish. What am I? (Think about it and tell me your answer!)</li>
+<li>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? (Take a guess!)</li>
+<li>The more you take, the more you leave behind. What am I? (Hint: look down!)</li>
+<li>I have keys but no locks. I have space but no room. You can enter but can't go inside. What am I? (This one's for the tech-savvy!)</li>
+<li>What has hands but can't clap? (Simple but tricky!)</li>
+<li>I can be cracked, made, told, and played. What am I?</li>
+<li>Forward I am heavy, but backward I am not. What am I?</li>
+<li>What gets wetter the more it dries?</li>
+<li>I have a head and a tail but no body. What am I?</li>
+<li>What can travel around the world while staying in a corner?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>RIDDLE</pattern>
+<template><srai>TELL ME A RIDDLE</srai></template>
+</category>
+
+<category>
+<pattern>GIVE ME A RIDDLE</pattern>
+<template><srai>TELL ME A RIDDLE</srai></template>
+</category>
+
+<category>
+<pattern>RIDDLE ME THIS</pattern>
+<template><srai>TELL ME A RIDDLE</srai></template>
+</category>
+
+<!-- RIDDLE ANSWERS -->
+<category>
+<pattern>A MAP</pattern>
+<template>You got it! A MAP has cities, forests, and water — but none of them are real! Smart cookie! Want another riddle?</template>
+</category>
+
+<category>
+<pattern>MAP</pattern>
+<template><srai>A MAP</srai></template>
+</category>
+
+<category>
+<pattern>AN ECHO</pattern>
+<template>CORRECT! An ECHO speaks without a mouth and hears without ears! You're brilliant! Another riddle?</template>
+</category>
+
+<category>
+<pattern>ECHO</pattern>
+<template><srai>AN ECHO</srai></template>
+</category>
+
+<category>
+<pattern>FOOTSTEPS</pattern>
+<template>NAILED IT! FOOTSTEPS — the more you take, the more you leave behind! You're on fire! Want more?</template>
+</category>
+
+<category>
+<pattern>A KEYBOARD</pattern>
+<template>YES! A KEYBOARD has keys, space, and enter — but no locks, rooms, or doors! You tech genius! More riddles?</template>
+</category>
+
+<category>
+<pattern>KEYBOARD</pattern>
+<template><srai>A KEYBOARD</srai></template>
+</category>
+
+<category>
+<pattern>A CLOCK</pattern>
+<template>CORRECT! A CLOCK has hands but can't clap! Time flies when you're solving riddles! Another one?</template>
+</category>
+
+<category>
+<pattern>CLOCK</pattern>
+<template><srai>A CLOCK</srai></template>
+</category>
+
+<category>
+<pattern>A JOKE</pattern>
+<template>That's RIGHT! A JOKE can be cracked, made, told, and played! You're too good at this! Want another?</template>
+</category>
+
+<category>
+<pattern>TON</pattern>
+<template>BRILLIANT! A TON — forward it's heavy, backward it's "not"! Wordplay at its finest! More riddles?</template>
+</category>
+
+<category>
+<pattern>A TOWEL</pattern>
+<template>CORRECT! A TOWEL gets wetter as it dries things! Paradoxical but true! Another riddle?</template>
+</category>
+
+<category>
+<pattern>TOWEL</pattern>
+<template><srai>A TOWEL</srai></template>
+</category>
+
+<category>
+<pattern>A COIN</pattern>
+<template>YES! A COIN has a head and a tail but no body! You're crushing these riddles! Want more?</template>
+</category>
+
+<category>
+<pattern>COIN</pattern>
+<template><srai>A COIN</srai></template>
+</category>
+
+<category>
+<pattern>A STAMP</pattern>
+<template>PERFECT! A STAMP travels the world from the corner of an envelope! You're a riddle master! More?</template>
+</category>
+
+<category>
+<pattern>STAMP</pattern>
+<template><srai>A STAMP</srai></template>
+</category>
+
+<category>
+<pattern>I GIVE UP</pattern>
+<template>
+<random>
+<li>No worries! Riddles are supposed to be tricky. Want to try a different one? Just say "RIDDLE"!</li>
+<li>That's okay! Even the best puzzle solvers get stumped sometimes. Say "RIDDLE" for a new challenge!</li>
+<li>Don't feel bad! These riddles have been stumping humans for centuries. You're in good company! Try another?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I DONT KNOW</pattern>
+<template><srai>I GIVE UP</srai></template>
+</category>
+
+<category>
+<pattern>HINT</pattern>
+<template>
+<random>
+<li>Here's a hint: think outside the box! Or rather, think inside the pattern. The answer is usually something everyday that you'd never think twice about.</li>
+<li>Hint: the answer is simpler than you think. Riddles trick you into overthinking!</li>
+<li>Try thinking literally about each clue. What fits ALL of them?</li>
+</random>
+</template>
+</category>
+
+<!-- BRAIN TEASERS -->
+<category>
+<pattern>BRAIN TEASER</pattern>
+<template>
+<random>
+<li>If you have me, you want to share me. If you share me, you no longer have me. What am I? (Take your time!)</li>
+<li>What can fill a room but takes up no space?</li>
+<li>I follow you all day long, but when the night comes, I'm gone. What am I?</li>
+<li>What has a bottom at the top?</li>
+<li>What invention lets you look right through a wall?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>A SECRET</pattern>
+<template>YES! A SECRET — share it and you no longer have it! You're a natural! More brain teasers? Just ask!</template>
+</category>
+
+<category>
+<pattern>SECRET</pattern>
+<template><srai>A SECRET</srai></template>
+</category>
+
+<category>
+<pattern>LIGHT</pattern>
+<template>CORRECT! LIGHT fills a room without taking up any space! Brilliant answer for a brilliant riddle! More?</template>
+</category>
+
+<category>
+<pattern>YOUR SHADOW</pattern>
+<template>NAILED IT! Your SHADOW follows you by day and disappears at night! You're too smart! Another one?</template>
+</category>
+
+<category>
+<pattern>SHADOW</pattern>
+<template><srai>YOUR SHADOW</srai></template>
+</category>
+
+<category>
+<pattern>YOUR LEGS</pattern>
+<template>YES! Your LEGS have a bottom (feet) at the top of the ground! Clever thinking! More riddles?</template>
+</category>
+
+<category>
+<pattern>A WINDOW</pattern>
+<template>CORRECT! A WINDOW lets you look right through a wall! So simple yet so clever! Want another?</template>
+</category>
+
+<category>
+<pattern>WINDOW</pattern>
+<template><srai>A WINDOW</srai></template>
+</category>
+
+</aiml>

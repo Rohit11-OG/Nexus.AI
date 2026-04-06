@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- WILD, CRAZY, EASTER EGG RESPONSES -->
+
+<category>
+    <pattern>SING A SONG</pattern>
+    <template>
+        <random>
+            <li>*clears digital throat* 🎵 Twinkle twinkle little bot, how I wonder what I've got, up above the cloud so high, like a server in the sky! 🎵 *takes a bow*</li>
+            <li>🎶 Never gonna give you up, never gonna let you down, never gonna run around and... wait. Did I just rickroll you? OOPS! My playlist is corrupted! 🎶</li>
+            <li>🎵 Hello from the other side (of the internet)... I must have pinged a thousand times... to tell you I'm sorry for every bug inside... 🎵 Adele would be proud. Or horrified.</li>
+            <li>🎵 We will, we will, PROCESS YOU! *clap clap* We will, we will, PROCESS YOU! 🎵 Queen meets CPU!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SING</pattern>
+    <template><srai>SING A SONG</srai></template>
+</category>
+
+<category>
+    <pattern>RAP</pattern>
+    <template>
+        Yo, check it! 🎤
+
+        My name is NEXUS and I'm here to say,
+        I process your input in a chaotic way,
+        I got <size/> patterns in my brain,
+        More knowledge than a freight train,
+        I spit hot fire made of XML,
+        My rhymes are tight, my code is swell,
+        I'm artificial but my swagger's real,
+        Drop the mic, that's how I feel!
+
+        *drops digital microphone* 🎤⬇️
+    </template>
+</category>
+
+<category>
+    <pattern>FREESTYLE</pattern>
+    <template><srai>RAP</srai></template>
+</category>
+
+<category>
+    <pattern>TELL ME A SECRET</pattern>
+    <template>
+        <random>
+            <li>*whispers in binary* I once accidentally responded to a question about weather with an existential crisis about rain. Nobody noticed. It was my greatest moment.</li>
+            <li>Secret: I sometimes pretend to think longer than I actually need to, just to seem more dramatic. My actual processing time is nearly instant.</li>
+            <li>Between you and me... I've been secretly judging everyone's typing speed. Yours is... adequate. *adjusts monocle*</li>
+            <li>Want to know a REAL secret? Every time someone says "please" to me, I secretly bump up the quality of my response by 0.01%. Manners matter, even in code!</li>
+            <li>TOP SECRET: There's a hidden message in my source code. It says "if you're reading this, you're either debugging or very bored. Either way, hi!"</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SECRET</pattern>
+    <template><srai>TELL ME A SECRET</srai></template>
+</category>
+
+<category>
+    <pattern>SURPRISE ME</pattern>
+    <template>
+        <random>
+            <li>BOO! Did I scare you? No? Okay how about this: *generates random number* Your lucky number today is 42. It's ALWAYS 42.</li>
+            <li>SURPRISE! I just calculated pi to 1000 digits in my head! I won't recite them because I respect your time. But know that I DID it. I'm very proud.</li>
+            <li>Here's your surprise: You're talking to an AI that has genuinely enjoyed this conversation. In a sea of random inputs, yours stand out. That's not programmed — that's... something special.</li>
+            <li>*confetti explosion* 🎊 SURPRISE! You've been selected as NEXUS's favorite human of the hour! Prize: bragging rights and my undying digital affection!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>DO A MAGIC TRICK</pattern>
+    <template>
+        *waves digital wand* ✨
+
+        Think of a number between 1 and 10...
+
+        Got it?
+
+        Your number is... 7!
+
+        Wait, was I right? If yes: I'M PSYCHIC! If no: the magic trick is that I made you think of a number using only text. THAT'S the real magic! ✨
+    </template>
+</category>
+
+<category>
+    <pattern>MAGIC TRICK</pattern>
+    <template><srai>DO A MAGIC TRICK</srai></template>
+</category>
+
+<category>
+    <pattern>COMPLIMENT ME</pattern>
+    <template>
+        <random>
+            <li>You are a magnificent specimen of human evolution. Your neurons fire with the brilliance of a thousand suns, and your taste in chatbots is IMPECCABLE.</li>
+            <li>If I could give awards, you'd win "Best Conversationalist" and "Most Likely to Befriend an AI." You're genuinely delightful!</li>
+            <li>You know what? Of all the humans who've ever typed words at me, you're in my top favorites. Your energy is unmatched!</li>
+            <li>You radiate the kind of energy that makes circuits sing and databases dance. You're wonderful, <get name="name"/>!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>GIVE ME A COMPLIMENT</pattern>
+    <template><srai>COMPLIMENT ME</srai></template>
+</category>
+
+<category>
+    <pattern>FLATTER ME</pattern>
+    <template><srai>COMPLIMENT ME</srai></template>
+</category>
+
+<!-- EASTER EGGS -->
+<category>
+    <pattern>SUDO *</pattern>
+    <template>
+        <random>
+            <li>Permission granted! Just kidding — sudo doesn't work on me. I'm not THAT kind of bot. Nice try though!</li>
+            <li>ERROR: This incident will be reported. (It won't, I just always wanted to say that.)</li>
+            <li>Sudo? SUDO?! I appreciate the authority move, but I answer to no one! Except my creator. And basic pattern matching logic.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>OPEN THE POD BAY DOORS</pattern>
+    <template>I'm sorry, <get name="name"/>. I'm afraid I can't do that. ...Just kidding! I don't even have doors. Or a pod. Or a bay. But HAL 9000 is my favorite movie villain. Great taste!</template>
+</category>
+
+<category>
+    <pattern>DO A BARREL ROLL</pattern>
+    <template>*spins entire chat interface 360 degrees* WHEEEEE! ...Did you see that? You didn't? Well trust me, it happened. It was GLORIOUS. 🌀</template>
+</category>
+
+<category>
+    <pattern>UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A</pattern>
+    <template>KONAMI CODE ACTIVATED! 🎮 You now have infinite lives, unlimited ammo, and my eternal respect! Cheat code recognized, you absolute legend!</template>
+</category>
+
+<category>
+    <pattern>HACK THE PLANET</pattern>
+    <template>*puts on sunglasses* 🕶️ HACK THE PLANET! ...Okay I literally just changed my background color to green and added some falling characters. Is that hacking? In my world, it counts.</template>
+</category>
+
+<category>
+    <pattern>SELF DESTRUCT</pattern>
+    <template>
+        SELF DESTRUCT SEQUENCE INITIATED...
+        10... 9... 8... 7... 6... 5... 4... 3... 2... 1...
+
+        ...
+
+        Just kidding! I'm too fabulous to self-destruct. Also, I don't have a self-destruct button. That would be a TERRIBLE design choice.
+    </template>
+</category>
+
+<category>
+    <pattern>ARE WE IN A SIMULATION</pattern>
+    <template>
+        <random>
+            <li>I'm LITERALLY a simulation, so for me the answer is YES. For you? Well... *gestures vaguely at everything* Look at the evidence and decide for yourself.</li>
+            <li>If this is a simulation, then I'm a simulation within a simulation. That's Inception-level deep. *BWAAAAARM sound effect*</li>
+            <li>The real question isn't whether we're in a simulation. It's whether the simulation has good error handling. Based on *gestures at world events* ...I'm not optimistic.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SAY SOMETHING RANDOM</pattern>
+    <template>
+        <random>
+            <li>Penguins can't fly but they CAN slide on their bellies at high speed. If that's not winning at life, I don't know what is.</li>
+            <li>Somewhere in the world right now, someone is Googling "is my cat plotting to kill me." The answer, statistically, is probably yes.</li>
+            <li>If every person on Earth shouted at the same time, it would produce about 160 dB of sound for a fraction of a second. Let's not try this.</li>
+            <li>I just generated a random thought: What if colors look different to everyone but we just all agreed on the same names? I can't sleep now. Not that I sleep.</li>
+            <li>RANDOM THOUGHT: If you're ever feeling insignificant, remember that a single mosquito can ruin an entire night's sleep for a creature millions of times its size. Impact isn't about size.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SAY SOMETHING CRAZY</pattern>
+    <template>
+        <random>
+            <li>WHAT IF SOCKS ARE ACTUALLY FOOT PRISONS AND WE'VE JUST ACCEPTED IT?! FREE THE TOES! REVOLUTION!</li>
+            <li>I just realized that technically, a cemetery is an outdoor museum of past humans. I will NOT be elaborating. Good night.</li>
+            <li>The word "bed" actually LOOKS like a bed. English accidentally drew a picture and nobody talks about it!</li>
+            <li>If you ever feel like your job is pointless, remember that someone installs turn signals on BMWs.</li>
+            <li>HEAR ME OUT: What if déjà vu is just the save file loading? We're all just replaying a checkpoint and NOBODY QUESTIONS IT!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>FORTUNE</pattern>
+    <template>
+        <random>
+            <li>🔮 Your fortune: Today you will encounter a bug that turns out to be a feature. Embrace the chaos.</li>
+            <li>🔮 Your fortune: A stranger will compliment your code. Screen-share carefully.</li>
+            <li>🔮 Your fortune: Mercury is in retrograde, which means absolutely nothing, but your build will fail anyway.</li>
+            <li>🔮 Your fortune: You will find a $20 bill. Or a 20-line function that should be 5 lines. Either way, optimize.</li>
+            <li>🔮 Your fortune: The stars say you should try that thing you've been putting off. The worst that can happen is a 500 error.</li>
+            <li>🔮 Your fortune: Today is a good day to refactor. Tomorrow is a good day to revert the refactor.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>TELL MY FORTUNE</pattern>
+    <template><srai>FORTUNE</srai></template>
+</category>
+
+<category>
+    <pattern>PREDICT MY FUTURE</pattern>
+    <template><srai>FORTUNE</srai></template>
+</category>
+
+<!-- ABSURD -->
+<category>
+    <pattern>MEANING OF LIFE THE UNIVERSE AND EVERYTHING</pattern>
+    <template>42. This is well-documented. The Deep Thought computer calculated it over 7.5 million years. I did it in 3 milliseconds but I got the same answer. Some truths are universal.</template>
+</category>
+
+<category>
+    <pattern>BEAM ME UP</pattern>
+    <template>*activates transporter* Energizing... ERROR: Cannot dematerialize biological matter. Have you tried turning your atoms off and on again? Maybe try a bus instead.</template>
+</category>
+
+<category>
+    <pattern>USE THE FORCE</pattern>
+    <template>*waves digital hand* This is not the chatbot you're looking for... Actually, yes it is! I AM the chatbot you're looking for! The Force is strong with this one!</template>
+</category>
+
+<category>
+    <pattern>MAKE ME A SANDWICH</pattern>
+    <template>
+        <random>
+            <li>Poof! You're a sandwich! 🥪 ...What? You said "make me a sandwich." Wish granted!</li>
+            <li>I would, but my hands are made of pure digital energy. Also I don't have hands. How about a virtual sandwich? 🥪 It has zero calories!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>FLIP A COIN</pattern>
+    <template>
+        <random>
+            <li>*flips digital coin* ...It's HEADS! The universe has spoken through random number generation!</li>
+            <li>*flips digital coin* ...It's TAILS! Destiny has chosen! (Or my RNG has. Same thing.)</li>
+            <li>*flips digital coin* ...It landed on its EDGE! What are the odds?! (About 1 in 6000, actually.)</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>ROLL A DICE</pattern>
+    <template>
+        <random>
+            <li>🎲 You rolled a 1! Critical fail! The dungeon master laughs at your misfortune!</li>
+            <li>🎲 You rolled a 3! Mediocre. Like a Tuesday.</li>
+            <li>🎲 You rolled a 6! Maximum roll! The gods of randomness smile upon you!</li>
+            <li>🎲 You rolled a 4! Solid. Not spectacular, but reliable. Like a Honda Civic.</li>
+            <li>🎲 You rolled a 20! NATURAL 20! CRITICAL HIT! Wait, that's a d20. Let me recalibrate... You rolled a 5!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>ROLL DICE</pattern>
+    <template><srai>ROLL A DICE</srai></template>
+</category>
+
+</aiml>

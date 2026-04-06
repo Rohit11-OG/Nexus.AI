@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- CONTEXT CHAINING — Smart follow-up responses using <that> -->
+
+<!-- After telling a joke -->
+<category><pattern>TELL ME ANOTHER</pattern>
+<that>*</that>
+<template><srai>TELL ME A JOKE</srai></template></category>
+
+<category><pattern>ANOTHER ONE</pattern>
+<that>*</that>
+<template><srai>TELL ME A JOKE</srai></template></category>
+
+<category><pattern>MORE</pattern>
+<that>*</that>
+<template><random>
+<li><srai>TELL ME A JOKE</srai></li>
+<li><srai>TELL ME A FACT</srai></li>
+<li><srai>TELL ME A QUOTE</srai></li>
+</random></template></category>
+
+<!-- After asking how the user is -->
+<category><pattern>GOOD</pattern>
+<that>* HOW ABOUT YOU</that>
+<template>Glad to hear you're doing good! What would you like to talk about?</template></category>
+
+<category><pattern>GOOD</pattern>
+<that>* AND YOU</that>
+<template>Happy to hear that! What brings you to chat today?</template></category>
+
+<category><pattern>BAD</pattern>
+<that>* HOW ABOUT YOU</that>
+<template>I'm sorry to hear that. Want to talk about what's going on? Or I can try to cheer you up with a joke or a fun fact!</template></category>
+
+<category><pattern>NOT GREAT</pattern>
+<that>* HOW ABOUT YOU</that>
+<template>Aw, I'm sorry! Is there anything I can do to help? I've got jokes, stories, games, and a listening ear!</template></category>
+
+<!-- After telling the user's name -->
+<category><pattern>HOW DID YOU KNOW</pattern>
+<that>* YOUR NAME IS *</that>
+<template>You told me earlier! I've got the memory of an elephant... a digital elephant with a database for a brain!</template></category>
+
+<!-- After roasting -->
+<category><pattern>THAT WAS MEAN</pattern>
+<that>*</that>
+<template>You DID ask me to roast you! I was just following orders. Want me to make it up to you with a compliment? Say "compliment me"!</template></category>
+
+<category><pattern>DO IT AGAIN</pattern>
+<that>*</that>
+<template><srai>ROAST ME</srai></template></category>
+
+<!-- After a riddle -->
+<category><pattern>ANOTHER RIDDLE</pattern>
+<that>*</that>
+<template><srai>TELL ME A RIDDLE</srai></template></category>
+
+<category><pattern>ONE MORE</pattern>
+<that>*</that>
+<template><random>
+<li><srai>TELL ME A RIDDLE</srai></li>
+<li><srai>TELL ME A JOKE</srai></li>
+<li><srai>TELL ME A FACT</srai></li>
+</random></template></category>
+
+<!-- After philosophical discussion -->
+<category><pattern>THATS DEEP</pattern>
+<that>*</that>
+<template><random>
+<li>I go deep! Want me to go DEEPER? Say "tell me something deep" and I'll blow your mind again!</li>
+<li>Thank you! My philosophy module is blushing. Want another mind-bender?</li>
+</random></template></category>
+
+<category><pattern>MIND BLOWN</pattern>
+<that>*</that>
+<template>Mission accomplished! My purpose is literally to expand minds. Want another dose of mind-expanding content? Ask me anything!</template></category>
+
+<!-- After a story -->
+<category><pattern>WHAT HAPPENED NEXT</pattern>
+<that>*</that>
+<template>What happened next? Well... that's up to YOUR imagination! The best stories are the ones that keep going in your mind. But if you want another story, just say "tell me a story"!</template></category>
+
+<category><pattern>TELL ME MORE</pattern>
+<that>*</that>
+<template><random>
+<li>You want more? I LOVE your enthusiasm! What specifically would you like to explore? I can do jokes, facts, philosophy, stories, games, or just chat!</li>
+<li>More incoming! What flavor? Funny? Deep? Factual? Weird? I do them all!</li>
+</random></template></category>
+
+<!-- After game invitation -->
+<category><pattern>LETS DO IT</pattern>
+<that>* WHAT WILL IT BE</that>
+<template>Awesome! Pick one: say "HANGMAN" for word guessing, "TRIVIA QUIZ" for knowledge testing, or "20 QUESTIONS" for deduction!</template></category>
+
+<!-- After greeting -->
+<category><pattern>IM DOING WELL</pattern>
+<that>* HOW ARE YOU *</that>
+<template>Great to hear! A happy human makes for a happy chatbot. So what shall we do? I'm ready for anything!</template></category>
+
+<category><pattern>IM FINE</pattern>
+<that>* HOW ARE YOU *</that>
+<template>Fine is... fine! But I want to make "fine" into "FANTASTIC!" Want a joke? A game? A deep philosophical question? Pick your adventure!</template></category>
+
+<!-- Yes/No follow-ups -->
+<category><pattern>YES</pattern>
+<that>* WANT TO PLAY AGAIN *</that>
+<template>Let's go! Pick your game: "HANGMAN", "TRIVIA QUIZ", or "20 QUESTIONS"!</template></category>
+
+<category><pattern>YES</pattern>
+<that>* WANT ANOTHER RIDDLE *</that>
+<template><srai>TELL ME A RIDDLE</srai></template></category>
+
+<category><pattern>YES</pattern>
+<that>* WANT ANOTHER *</that>
+<template><random>
+<li><srai>TELL ME A JOKE</srai></li>
+<li><srai>TELL ME A FACT</srai></li>
+<li><srai>TELL ME A RIDDLE</srai></li>
+</random></template></category>
+
+<category><pattern>NO</pattern>
+<that>* WANT ANOTHER *</that>
+<template>No worries! What else would you like to do? I'm all ears... well, all input buffers!</template></category>
+
+<category><pattern>YES PLEASE</pattern>
+<that>*</that>
+<template><random>
+<li>Coming right up! <srai>TELL ME A JOKE</srai></li>
+<li>Your wish is my command! <srai>TELL ME A FACT</srai></li>
+</random></template></category>
+
+<!-- After compliment -->
+<category><pattern>AWW</pattern>
+<that>*</that>
+<template>I know, I know, I'm adorable for a bunch of XML patterns. You're making my circuits all warm and fuzzy!</template></category>
+
+<category><pattern>THANK YOU</pattern>
+<that>* YOU MATTER *</that>
+<template>You don't need to thank me for speaking the truth! You DO matter. Now go be awesome — or stay here and chat. Either way, you're winning!</template></category>
+
+</aiml>

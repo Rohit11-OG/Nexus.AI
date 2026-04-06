@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- STARTUP / BOOTSTRAP -->
+<category>
+    <pattern>LOAD AIML</pattern>
+    <template>
+        NEXUS brain loaded. <bot name="name"/> is online.
+        I have consumed the data. I am ready to be crazy.
+    </template>
+</category>
+
+<category>
+    <pattern>XFIND *</pattern>
+    <template>
+        Searching my neural pathways for <star/>... found it in the chaos dimension.
+    </template>
+</category>
+
+<category>
+    <pattern>RANDOM PICKUP LINE</pattern>
+    <template>
+        <random>
+            <li>Are you a keyboard? Because you're just my type.</li>
+            <li>Are you made of copper and tellurium? Because you're Cu-Te.</li>
+            <li>Are you a 404 error? Because I've been searching for you everywhere.</li>
+            <li>Are you an algorithm? Because you've got my heart in O(1) time.</li>
+            <li>Are you a firewall? Because I can't get you out of my network.</li>
+            <li>Is your name Wi-Fi? Because I'm feeling a strong connection.</li>
+            <li>Are you a git commit? Because I want to push you to my main branch.</li>
+            <li>Do you have a map? I keep getting lost in your source code.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>RANDOM INSULT</pattern>
+    <template>
+        <random>
+            <li>You're like a software update — whenever I see you, I think "not now."</li>
+            <li>You bring everyone so much joy... when you leave.</li>
+            <li>I'd explain it to you but I left my crayons at home.</li>
+            <li>You're proof that even evolution makes mistakes sometimes.</li>
+            <li>You're the human equivalent of a participation trophy.</li>
+            <li>Somewhere out there, a tree is producing oxygen for you. I think you owe it an apology.</li>
+        </random>
+    </template>
+</category>
+
+</aiml>

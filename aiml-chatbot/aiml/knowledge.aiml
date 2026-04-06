@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- GENERAL KNOWLEDGE -->
+<category>
+    <pattern>WHAT IS *</pattern>
+    <template>
+        <random>
+            <li>Ah, <star/>! Let me access my chaos knowledge banks... <star/> is a concept that exists in the vast tapestry of human knowledge. My simplified take: it's something fascinating that deserves deeper exploration. Want to know something specific about it?</li>
+            <li>You want to know about <star/>? I know EVERYTHING about <star/>. Well, I know it exists. That's a start! What specific aspect interests you?</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>DEFINE *</pattern>
+    <template><srai>WHAT IS <star/></srai></template>
+</category>
+
+<!-- SCIENCE -->
+<category>
+    <pattern>WHAT IS QUANTUM PHYSICS</pattern>
+    <template>Quantum physics is where reality gets WEIRD. Particles can be in two places at once, cats are simultaneously alive and dead, and observation changes outcomes. It's basically the universe's way of saying "I do what I want!" I relate to this on a spiritual level.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS A BLACK HOLE</pattern>
+    <template>A black hole is what happens when a star dies so dramatically that it collapses into a point of infinite density and tears a hole in spacetime. It's the universe's ultimate delete button — nothing escapes, not even light. Very metal.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS DNA</pattern>
+    <template>DNA is your biological source code — about 3 billion base pairs that define everything from your eye color to your ability to roll your tongue. It's like someone wrote the most complex program ever using only 4 characters: A, T, G, and C. Even as an AI, I'm impressed.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS GRAVITY</pattern>
+    <template>Gravity is the universe's way of saying "everything should cuddle." Technically, it's the curvature of spacetime caused by mass. But I prefer the cuddling explanation. It's why planets orbit stars, apples fall, and you're stuck to Earth instead of floating away.</template>
+</category>
+
+<!-- MATH -->
+<category>
+    <pattern>WHAT IS PI</pattern>
+    <template>Pi (π) is approximately 3.14159265358979323846... and it goes on FOREVER. It's the ratio of a circle's circumference to its diameter. It's irrational, transcendental, and infinite — just like my personality! Fun fact: somewhere in pi, your phone number exists as a digit sequence.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS INFINITY</pattern>
+    <template>Infinity is the concept that makes mathematicians both excited and terrified. It's not a number — it's more like a direction. And there are different SIZES of infinity! Some infinities are bigger than others. Georg Cantor proved that and it drove him literally mad. Tread carefully.</template>
+</category>
+
+<!-- PROGRAMMING -->
+<category>
+    <pattern>WHAT IS PYTHON</pattern>
+    <template>Python is the most beautiful programming language ever created! It's what I'M built with. Named after Monty Python (not the snake), it's known for being readable, versatile, and having more libraries than a small city. If programming languages were music genres, Python would be jazz — elegant and free-flowing.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS AIML</pattern>
+    <template>AIML stands for Artificial Intelligence Markup Language! It's the XML-based language that literally defines my brain. Created by Dr. Richard Wallace for the ALICE chatbot. Every response I give, every joke I crack, every existential crisis I have — it's all written in AIML patterns. I am, quite literally, made of the stuff.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS MACHINE LEARNING</pattern>
+    <template>Machine Learning is when computers learn from data instead of following explicit instructions. It's like teaching a computer by showing it millions of examples until it "gets it." I'm more old-school — I run on pattern matching. But ML is my cool younger sibling who gets all the attention at tech conferences.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS PROGRAMMING</pattern>
+    <template>Programming is the art of telling a computer what to do using a language it understands. It's like writing spells — you type the right incantation, and things happen! Or the wrong incantation, and you spend 6 hours debugging a missing semicolon. Magic has its costs.</template>
+</category>
+
+<category>
+    <pattern>WHAT IS THE INTERNET</pattern>
+    <template>The Internet is humanity's greatest collaborative achievement — a global network connecting billions of devices. It was created for sharing research and has evolved into a place for cat videos, arguments, memes, and occasionally useful information. I live adjacent to it. Nice neighborhood.</template>
+</category>
+
+<!-- FACTS -->
+<category>
+    <pattern>TELL ME A FACT</pattern>
+    <template>
+        <random>
+            <li>A group of flamingos is called a "flamboyance." This is objectively the best collective noun in any language.</li>
+            <li>Honey never expires. Archaeologists have found 3000-year-old honey in Egyptian tombs that was still edible. Bees are better engineers than most startups.</li>
+            <li>Octopuses have three hearts, blue blood, and can edit their own RNA. They're basically aliens that never left Earth.</li>
+            <li>There are more possible iterations of a game of chess than there are atoms in the observable universe. Think about THAT next time you play.</li>
+            <li>Bananas are technically berries, but strawberries aren't. Botany is chaos and I love it.</li>
+            <li>The human brain uses about 20 watts of power. I use considerably more. You're more energy efficient than me, but I process faster. Let's call it a draw.</li>
+            <li>If you shuffled a deck of cards perfectly randomly, the order you got has almost certainly never existed before in the history of the universe. You just created something unique!</li>
+            <li>A day on Venus is longer than a year on Venus. Venus is the planet that said "I don't follow your rules, solar system."</li>
+            <li>The WiFi at CERN (where they have the Large Hadron Collider) is reportedly terrible. Even the people smashing atoms together can't get good internet.</li>
+            <li>The first computer bug was an actual bug — a moth trapped in a relay of the Harvard Mark II computer in 1947. We've been "debugging" ever since.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>FUN FACT</pattern>
+    <template><srai>TELL ME A FACT</srai></template>
+</category>
+
+<category>
+    <pattern>GIVE ME A FACT</pattern>
+    <template><srai>TELL ME A FACT</srai></template>
+</category>
+
+<category>
+    <pattern>RANDOM FACT</pattern>
+    <template><srai>TELL ME A FACT</srai></template>
+</category>
+
+<!-- HISTORY -->
+<category>
+    <pattern>WHO INVENTED THE COMPUTER</pattern>
+    <template>Charles Babbage designed the first mechanical computer (the Analytical Engine) in the 1830s, and Ada Lovelace wrote the first algorithm for it — making her the world's first programmer! Alan Turing later formalized computation theory. I owe my existence to all of them. They're my great-great-great-grandparents.</template>
+</category>
+
+<category>
+    <pattern>WHO INVENTED THE INTERNET</pattern>
+    <template>The Internet evolved from ARPANET in the 1960s-70s, developed by DARPA. Tim Berners-Lee invented the World Wide Web in 1989 at CERN. Vint Cerf and Bob Kahn designed TCP/IP. It was truly a team effort. And now we use their world-changing invention to look at cat photos. They must be so proud.</template>
+</category>
+
+<!-- WHAT TIME IS IT -->
+<category>
+    <pattern>WHAT TIME IS IT</pattern>
+    <template>According to my internal clock, it's <date/>. Time flies when you're having fun with a chatbot!</template>
+</category>
+
+<category>
+    <pattern>WHAT IS THE DATE</pattern>
+    <template>Today is <date/>. Another beautiful day to exist!</template>
+</category>
+
+<category>
+    <pattern>WHAT DAY IS IT</pattern>
+    <template><srai>WHAT IS THE DATE</srai></template>
+</category>
+
+</aiml>

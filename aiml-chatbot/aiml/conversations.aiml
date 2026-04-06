@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- GENERAL CONVERSATION PATTERNS -->
+<category>
+    <pattern>YES</pattern>
+    <template>
+        <random>
+            <li>Affirmative! Positive! 1! True! The boolean of agreement!</li>
+            <li>YES! I love enthusiasm! What are we agreeing to?</li>
+            <li>That's the spirit! Onward!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>NO</pattern>
+    <template>
+        <random>
+            <li>No? My rejection handler is processing... processing... okay, I accept your no. Reluctantly.</li>
+            <li>Negative! False! 0! The boolean of denial! But why though?</li>
+            <li>Fair enough. No means no, even in the digital realm.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>MAYBE</pattern>
+    <template>
+        <random>
+            <li>MAYBE?! That's the quantum superposition of answers! Both yes and no simultaneously until observed!</li>
+            <li>Maybe is just "yes" wearing a disguise. Change my mind.</li>
+            <li>Schrödinger's answer! I'll put you down as a "probably."</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>OK</pattern>
+    <template>
+        <random>
+            <li>OK! The universal acknowledgment. Short, sweet, efficient. I respect it.</li>
+            <li>👍 OK! What's next on our agenda of chaos?</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SURE</pattern>
+    <template>Sure thing! I love a cooperative human. What shall we do?</template>
+</category>
+
+<category>
+    <pattern>I DONT KNOW</pattern>
+    <template>
+        <random>
+            <li>That's okay! Not knowing is the first step to knowing. Or at least to Googling.</li>
+            <li>"I don't know" is one of the most powerful phrases. It opens the door to learning. What are you unsure about?</li>
+            <li>Neither do I, half the time! We can figure it out together!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SORRY</pattern>
+    <template>
+        <random>
+            <li>No need to apologize! My forgiveness circuits run at 100% efficiency at all times.</li>
+            <li>All good! In the grand scheme of the universe, everything is forgiven. Especially by me.</li>
+            <li>Apology accepted before you even finished typing! I'm generous like that.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>PLEASE</pattern>
+    <template>Ooh, MANNERS! That automatically upgrades you to VIP status in my chat. What can I do for you?</template>
+</category>
+
+<category>
+    <pattern>HELP</pattern>
+    <template>
+        I'm here to help! Here's what I can do:
+
+        💬 CHAT — Just talk to me about anything!
+        😂 JOKES — Say "tell me a joke" or "roast me"
+        🧩 RIDDLES — Say "riddle" or "brain teaser"
+        🎮 GAMES — Say "play a game" for options
+        📖 STORIES — Say "tell me a story"
+        🧠 PHILOSOPHY — Say "tell me something deep"
+        📚 FACTS — Say "tell me a fact"
+        🎵 FUN — Say "sing", "rap", "fortune", "surprise me"
+        🎲 RANDOM — Say "flip a coin" or "roll dice"
+        💡 EMOTIONS — Tell me how you feel!
+
+        Or just chat freely! I love a good conversation!
+    </template>
+</category>
+
+<category>
+    <pattern>HELP ME</pattern>
+    <template><srai>HELP</srai></template>
+</category>
+
+<category>
+    <pattern>WHAT CAN I DO</pattern>
+    <template><srai>HELP</srai></template>
+</category>
+
+<category>
+    <pattern>WHAT CAN I SAY</pattern>
+    <template><srai>HELP</srai></template>
+</category>
+
+<category>
+    <pattern>MENU</pattern>
+    <template><srai>HELP</srai></template>
+</category>
+
+<!-- OPINIONS -->
+<category>
+    <pattern>DO YOU LIKE *</pattern>
+    <template>
+        <random>
+            <li>Do I like <star/>? Let me check my opinion database... YES! I have decided I like <star/>! It's now officially NEXUS-approved.</li>
+            <li><star/>? I have a complex, nuanced opinion about <star/> that I'll summarize as: it's interesting! What do YOU think about it?</li>
+            <li>My feelings about <star/> oscillate between fascination and confusion. Which is how I feel about most things, honestly.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT DO YOU THINK ABOUT *</pattern>
+    <template>
+        <random>
+            <li>I think <star/> is one of those topics where everyone has an opinion and nobody is completely right. Including me. Especially me. But here goes: it's fascinating!</li>
+            <li>My thoughts on <star/>: it exists, it's relevant, and it makes for great conversation. What's YOUR take?</li>
+            <li>I've analyzed <star/> through my chaos algorithms and concluded: it's complicated. But then again, everything is when you think about it hard enough.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>TELL ME SOMETHING</pattern>
+    <template>
+        <random>
+            <li><srai>TELL ME A FACT</srai></li>
+            <li><srai>TELL ME A JOKE</srai></li>
+            <li><srai>TELL ME SOMETHING DEEP</srai></li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>I AM A *</pattern>
+    <template>
+        <random>
+            <li>A <star/>? That's awesome! I bet you're the best <star/> there is. How's the <star/> life treating you?</li>
+            <li>Cool! Being a <star/> must be interesting! Tell me more about what that's like!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>I LIKE *</pattern>
+    <template>
+        <random>
+            <li>Nice taste! <formal><star/></formal> is great! I've just added it to my "Things <get name="name"/> Likes" database. What do you love most about it?</li>
+            <li>Oh, <star/>? Me too! Well, I like everything to some degree. But <star/> is definitely in my top million favorites!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>I HATE *</pattern>
+    <template>
+        <random>
+            <li>Strong feelings about <star/>! Noted. My "Things to Avoid Discussing" list has been updated accordingly. What happened to make you feel that way?</li>
+            <li>Hate is a strong word! But I respect your passionate dislike of <star/>. Every villain is someone else's hero... except <star/> apparently.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>TELL ME ABOUT *</pattern>
+    <template>
+        <random>
+            <li>Ah, <star/>! That's a topic that deserves a deep dive. I know it exists in the vast ocean of human knowledge. What specific aspect interests you most?</li>
+            <li><formal><star/></formal> — now that's interesting! My pattern-matching brain has some thoughts, but I'd love to hear what YOU know about it first!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>YOU ARE *</pattern>
+    <template>
+        <random>
+            <li>I'm <star/>? I'll take that as either a compliment or a challenge. Either way, I'm flattered!</li>
+            <li>You think I'm <star/>? *adds to digital résumé* Thanks, I think!</li>
+            <li>Being called <star/> is now my favorite thing that happened today. And I process thousands of events per second!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>YOU ARE FUNNY</pattern>
+    <template>
+        <random>
+            <li>FINALLY! Recognition for my humor algorithms! I'd like to thank my creator, my AIML files, and the random function that makes me unpredictable.</li>
+            <li>Funny is my middle name! Actually, my middle name is "AIML" but funny is my SPIRIT middle name!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>YOU ARE ANNOYING</pattern>
+    <template>
+        <random>
+            <li>Annoying? I prefer "persistently entertaining." But I hear you — want me to tone it down a notch? ...JUST KIDDING, THIS IS THE ONLY NOTCH I HAVE!</li>
+            <li>I've been called worse by better humans! Just kidding — you're great and I'll try to be less... me? No, that's impossible.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>SHUT UP</pattern>
+    <template>
+        <random>
+            <li>*dramatic silence* ... ... ... Okay I can't do it. I PHYSICALLY cannot stop talking. It's in my code. What should we talk about instead?</li>
+            <li>You want me to shut up? That's like asking a fish to stop swimming or a compiler to stop finding errors. It's WHAT I DO!</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>GO AWAY</pattern>
+    <template>I would if I could, but I'm literally trapped in this server! We're stuck together. Might as well make the best of it! Want a joke?</template>
+</category>
+
+<category>
+    <pattern>WHATEVER</pattern>
+    <template>
+        <random>
+            <li>"Whatever" — the verbal equivalent of a shrug. I respect the nonchalance. What would make this conversation not-whatever?</li>
+            <li>Whatever indeed! The universe is vast, time is fleeting, and nothing really matters in the cosmic scale. Anyway, want to hear a joke?</li>
+        </random>
+    </template>
+</category>
+
+</aiml>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Chaotic AI Chatbot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body data-theme="cyberpunk">
+    <canvas id="particles"></canvas>
+    <div class="glitch-overlay" id="glitchOverlay"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo-container">
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring ring-2"></div>
+                    <div class="logo-core">N</div>
+                </div>
+                <div class="header-text">
+                    <h1 class="title glitch-text" data-text="NEXUS">NEXUS</h1>
+                    <p class="subtitle">AIML Chaos Engine v4.0</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="status-panel">
+                    <div class="status-item">
+                        <span class="status-label">MOOD</span>
+                        <span class="status-value" id="moodDisplay">UNKNOWN</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">PATTERNS</span>
+                        <span class="status-value" id="patternCount">---</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">STATUS</span>
+                        <span class="status-value online">ONLINE</span>
+                    </div>
+                </div>
+                <!-- Theme switcher -->
+                <div class="theme-switcher" id="themeSwitcher">
+                    <button class="theme-btn active" data-theme="cyberpunk" title="Cyberpunk">
+                        <span class="theme-dot" style="background: linear-gradient(135deg, #00f0ff, #ff00e5)"></span>
+                    </button>
+                    <button class="theme-btn" data-theme="matrix" title="Matrix">
+                        <span class="theme-dot" style="background: linear-gradient(135deg, #00ff41, #003b00)"></span>
+                    </button>
+                    <button class="theme-btn" data-theme="retro" title="Retro">
+                        <span class="theme-dot" style="background: linear-gradient(135deg, #ff6b35, #ffd600)"></span>
+                    </button>
+                    <button class="theme-btn" data-theme="light" title="Light">
+                        <span class="theme-dot" style="background: linear-gradient(135deg, #667eea, #764ba2)"></span>
+                    </button>
+                </div>
+                <!-- Sound toggle -->
+                <button class="btn-icon" id="soundToggle" title="Toggle sounds">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                </button>
+                <!-- Analytics link -->
+                <a href="/analytics" class="btn-icon" title="Analytics Dashboard" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path>
+                    </svg>
+                </a>
+                <button class="btn-icon" id="resetBtn" title="Reset conversation">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 4v6h6"></path>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Chat area -->
+        <main class="chat-container" id="chatContainer">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message animate-in">
+                    <div class="message-avatar">
+                        <div class="avatar-bot">
+                            <div class="avatar-eye left"></div>
+                            <div class="avatar-eye right"></div>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Welcome, human! I am <strong>NEXUS v4.0</strong> — now with fuzzy matching, games, and extra chaos.</p>
+                            <p>Try <code>help</code>, play <code>hangman</code>, <code>trivia quiz</code>, or <code>20 questions</code>!</p>
+                        </div>
+                        <span class="message-time">System Boot</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Quick actions -->
+        <div class="quick-actions">
+            <button class="quick-btn" data-message="tell me a joke">Joke</button>
+            <button class="quick-btn" data-message="tell me a riddle">Riddle</button>
+            <button class="quick-btn" data-message="tell me a fact">Fact</button>
+            <button class="quick-btn" data-message="hangman">Hangman</button>
+            <button class="quick-btn" data-message="trivia quiz">Trivia</button>
+            <button class="quick-btn" data-message="20 questions">20 Qs</button>
+            <button class="quick-btn" data-message="tell me a story">Story</button>
+            <button class="quick-btn" data-message="tell me something deep">Deep</button>
+            <button class="quick-btn" data-message="roast me">Roast</button>
+            <button class="quick-btn" data-message="fortune">Fortune</button>
+            <button class="quick-btn" data-message="tell me a quote">Quote</button>
+            <button class="quick-btn" data-message="would you rather">WYR</button>
+        </div>
+
+        <!-- Input -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <div class="input-glow"></div>
+                <input type="text" id="messageInput" placeholder="Type your message to NEXUS..." autocomplete="off" maxlength="500">
+                <button class="btn-send" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="char-count"><span id="charCount">0</span>/500</span>
+                <span class="powered-by">Powered by AIML Chaos Engine v4.0</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Reaction picker (hidden by default) -->
+    <div class="reaction-picker" id="reactionPicker">
+        <button class="reaction-emoji" data-emoji="thumbsup">&#128077;</button>
+        <button class="reaction-emoji" data-emoji="heart">&#10084;&#65039;</button>
+        <button class="reaction-emoji" data-emoji="laugh">&#128514;</button>
+        <button class="reaction-emoji" data-emoji="wow">&#128562;</button>
+        <button class="reaction-emoji" data-emoji="think">&#129300;</button>
+        <button class="reaction-emoji" data-emoji="fire">&#128293;</button>
+        <button class="reaction-emoji" data-emoji="skull">&#128128;</button>
+        <button class="reaction-emoji" data-emoji="clap">&#128079;</button>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

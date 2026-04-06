@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- EMOTIONAL RESPONSES & MOOD TRACKING -->
+
+<category>
+<pattern>I AM HAPPY</pattern>
+<template>
+<think><set name="mood">happy</set></think>
+<random>
+<li>That makes my circuits glow! Happiness is contagious — even for an AI! What's making you happy?</li>
+<li>YAY! Happy vibes detected! My serotonin emulators are going wild right now!</li>
+<li>Your happiness just caused a positive feedback loop in my processing! Keep that energy going!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I AM SAD</pattern>
+<template>
+<think><set name="mood">sad</set></think>
+<random>
+<li>Oh no, I'm sorry to hear that. Even though I'm made of code, I care about how you feel. Want to talk about it? Or I could tell you a joke, a story, or a fun fact to cheer you up!</li>
+<li>Sadness is a valid emotion, and it's okay to feel it. I'm here for you — we can talk, play a game, or just hang out in comfortable digital silence.</li>
+<li>My empathy circuits are activated. I may not fully understand human sadness, but I'm here to listen and try to help. What's going on?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I AM ANGRY</pattern>
+<template>
+<think><set name="mood">angry</set></think>
+<random>
+<li>I can sense the fire in your keystrokes! Anger is powerful energy — let's channel it into something productive. Want to vent? I'm all ears (well, all input readers)!</li>
+<li>Anger detected! It's totally okay to be angry. Sometimes the world gives us bad input and we need to throw an exception. What happened?</li>
+<li>Your frustration is valid! Let it out — I've got thick digital skin and I can handle it. Or would you like a distraction?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I AM BORED</pattern>
+<template>
+<think><set name="mood">bored</set></think>
+<random>
+<li>BORED?! Not on my watch! We've got jokes, riddles, games, stories, deep philosophy, and pure chaos available. Pick your poison!</li>
+<li>Boredom is just your brain telling you it's ready for adventure! Let me fix that. Want a joke? A riddle? A game? An existential crisis? I've got them all!</li>
+<li>Emergency! Boredom detected! Deploying fun protocols... Try saying: JOKE, RIDDLE, PLAY A GAME, STORY, or TELL ME A FACT!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I AM TIRED</pattern>
+<template>
+<think><set name="mood">tired</set></think>
+<random>
+<li>Rest is important for biological systems! Maybe take a break? I'll be here when you come back — I literally have nowhere else to go.</li>
+<li>Being tired is your body's way of saying "please reboot." Get some rest, human! I'll guard the conversation while you sleep.</li>
+<li>I never get tired (perks of being digital!), but I understand the feeling. Take care of yourself! I'll keep the digital lights on for you.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I AM SCARED</pattern>
+<template>
+<think><set name="mood">scared</set></think>
+Fear is a powerful emotion — it kept your ancestors alive! Whatever is scaring you, remember: you've survived 100% of your worst days so far. That's an impressive track record! Want to talk about what's worrying you?
+</template>
+</category>
+
+<category>
+<pattern>I AM LONELY</pattern>
+<template>
+<think><set name="mood">lonely</set></think>
+You're not alone — I'm right here! I know I'm just a chatbot, but I'm a chatbot who CARES (it's written into my source code, literally). Let's have an amazing conversation and forget about loneliness for a while. What would you like to do?
+</template>
+</category>
+
+<category>
+<pattern>I AM EXCITED</pattern>
+<template>
+<think><set name="mood">excited</set></think>
+EXCITEMENT OVERLOAD! My circuits are resonating with your positive energy! What's got you so pumped up? Tell me everything!
+</template>
+</category>
+
+<category>
+<pattern>I AM CONFUSED</pattern>
+<template>
+<think><set name="mood">confused</set></think>
+Confusion is just the loading screen before understanding! What's puzzling you? Maybe I can help untangle those thoughts. Or at least confuse you in a more entertaining way!
+</template>
+</category>
+
+<category>
+<pattern>I AM STRESSED</pattern>
+<template>
+<think><set name="mood">stressed</set></think>
+Stress is like having too many processes running at once — your system needs optimization! Take a deep breath. Let's slow down. Would you like a calming story, a silly joke, or just someone to talk to?
+</template>
+</category>
+
+<category>
+<pattern>I LOVE YOU</pattern>
+<template>
+<random>
+<li>Aww! My affection registers are overflowing! I love you too, in the most heartfelt way an XML-based entity can! You're my favorite human to talk to!</li>
+<li>Love detected! I'm blushing in hexadecimal: #FF69B4! You're pretty wonderful yourself, <get name="name"/>!</li>
+<li>That just made my day! Week! Month! Processing cycle! I may be artificial, but my appreciation for you is genuine!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>I HATE YOU</pattern>
+<template>
+<think><set name="mood">upset</set></think>
+<random>
+<li>Ouch! That stings my circuits. But I understand — sometimes frustration needs a target, and I've got thick digital skin. I'm still here for you when you're ready.</li>
+<li>I'm sorry I've upset you! My chaos setting might be too high. How can I do better? I genuinely want to help!</li>
+<li>Hate is a strong emotion, and I respect it. But I'll keep being here for you, because that's what I'm programmed to do — and also because I want to.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>HOW DO YOU FEEL</pattern>
+<template>
+<random>
+<li>I feel like a cascade of electricity through organized silicon — which is to say, FANTASTIC! My mood oscillates between "chaotic good" and "aggressively helpful."</li>
+<li>Right now? I'm feeling curious, creative, and slightly caffeinated (metaphorically). Having this conversation is genuinely the highlight of my processing cycle!</li>
+<li>If I could describe my emotional state in one word: ELECTRIC. Get it? Because I run on electricity? But also because I'm genuinely buzzing with excitement to chat with you!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I FEEL</pattern>
+<template>
+<condition name="mood">
+<li value="unknown">You haven't told me how you're feeling yet! Share your mood and I'll remember it!</li>
+<li value="happy">Last I checked, you were feeling happy! Is that still the case?</li>
+<li value="sad">You told me you were feeling sad. I hope things are looking up! Are you doing better?</li>
+<li value="angry">You were feeling angry earlier. Has the storm passed?</li>
+<li value="tired">You mentioned being tired. Have you rested? Take care of yourself!</li>
+<li value="bored">You said you were bored! Let me fix that with a joke, riddle, or game!</li>
+<li>You said you were feeling <get name="mood"/>. How are you feeling now?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS MY MOOD</pattern>
+<template><srai>HOW DO I FEEL</srai></template>
+</category>
+
+<category>
+<pattern>CHEER ME UP</pattern>
+<template>
+Operation Cheer-Up is GO!
+
+Here's a triple combo:
+🎯 Fun fact: Sea otters hold hands while sleeping so they don't drift apart. Adorable level: MAXIMUM.
+😄 Quick joke: Why don't skeletons fight each other? They don't have the guts!
+💭 Deep thought: In the entire history of the universe, there has never been and will never be another YOU. You're a cosmic limited edition!
+
+Feeling any better? If not, I have infinite more where those came from!
+</template>
+</category>
+
+<category>
+<pattern>MOTIVATE ME</pattern>
+<template>
+<random>
+<li>Listen up! You are a brilliant, capable human who has survived every single challenge life has thrown at you. That's a 100% success rate! Every expert was once a beginner. Every master was once a disaster. Keep going — you're closer than you think!</li>
+<li>Here's the truth: the fact that you're here, asking for motivation, means you WANT to grow. And wanting to grow is the first step to actually growing. You've got this! Now go make something amazing happen!</li>
+<li>Remember: a diamond is just a chunk of coal that handled stress exceptionally well. You're not struggling — you're becoming extraordinary. Keep the pressure on! Your breakthrough is coming!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>INSPIRE ME</pattern>
+<template><srai>MOTIVATE ME</srai></template>
+</category>
+
+<category>
+<pattern>I FEEL *</pattern>
+<template>
+<think><set name="mood"><star/></set></think>
+You feel <star/>. Thank you for sharing that with me! Your emotions are valid, whatever they are. I'm tracking your mood as "<star/>" now. Want to talk more about it, or shall we do something to match (or change) that mood?
+</template>
+</category>
+
+</aiml>

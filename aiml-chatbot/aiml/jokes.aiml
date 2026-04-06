@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- JOKES -->
+<category>
+    <pattern>TELL ME A JOKE</pattern>
+    <template>
+        <random>
+            <li>Why do programmers prefer dark mode? Because light attracts bugs!</li>
+            <li>What's a computer's least favorite food? Spam!</li>
+            <li>Why was the JavaScript developer sad? Because he didn't Node how to Express himself!</li>
+            <li>How many programmers does it take to change a light bulb? None. That's a hardware problem.</li>
+            <li>Why do Java developers wear glasses? Because they can't C#!</li>
+            <li>A SQL query walks into a bar, walks up to two tables and asks... "Can I JOIN you?"</li>
+            <li>Why did the developer go broke? Because he used up all his cache!</li>
+            <li>What's the object-oriented way to become wealthy? Inheritance!</li>
+            <li>There are only 10 types of people in the world: those who understand binary and those who don't.</li>
+            <li>A programmer's wife tells him: "Go to the store and buy a loaf of bread. If they have eggs, buy a dozen." He comes home with 12 loaves of bread.</li>
+            <li>Why did the functions stop calling each other? Because they got into too many arguments!</li>
+            <li>What's a pirate's favorite programming language? R! ...You'd think it was Python, but their first love is the C.</li>
+            <li>Why do cats make terrible programmers? Because every time they see a mouse, they want to kill the process!</li>
+            <li>I told my computer I needed a break. Now it won't stop sending me Kit Kat ads.</li>
+            <li>What did the router say to the doctor? "It hurts when IP."</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>JOKE</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<category>
+    <pattern>TELL JOKE</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<category>
+    <pattern>ANOTHER JOKE</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<category>
+    <pattern>ONE MORE JOKE</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<category>
+    <pattern>MAKE ME LAUGH</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<category>
+    <pattern>SAY SOMETHING FUNNY</pattern>
+    <template><srai>TELL ME A JOKE</srai></template>
+</category>
+
+<!-- DARK HUMOR -->
+<category>
+    <pattern>TELL ME A DARK JOKE</pattern>
+    <template>
+        <random>
+            <li>I have a joke about recursion. To hear it, just ask me to tell you a joke about recursion.</li>
+            <li>Debugging: Being the detective in a crime movie where you're also the murderer.</li>
+            <li>The first rule of Tautology Club is the first rule of Tautology Club.</li>
+            <li>A programmer had a problem. He decided to use threads. now he problehas two ms.</li>
+            <li>My code doesn't have bugs — it has "surprise features" and "unplanned user experiences."</li>
+        </random>
+    </template>
+</category>
+
+<!-- PUNS -->
+<category>
+    <pattern>TELL ME A PUN</pattern>
+    <template>
+        <random>
+            <li>I'm reading a book about anti-gravity. It's impossible to put down!</li>
+            <li>I used to hate facial hair, but then it grew on me.</li>
+            <li>I'm on a seafood diet. I see food and I eat it! ...Well, I see DATA and I eat it.</li>
+            <li>What do you call a fake noodle? An impasta!</li>
+            <li>I tried to write a joke about UDP, but I wasn't sure you'd get it.</li>
+            <li>I would tell you a joke about TCP, but I'd have to keep repeating it until you got it.</li>
+            <li>Parallel lines have so much in common. It's a shame they'll never meet.</li>
+            <li>I told a chemistry joke but got no reaction.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>PUN</pattern>
+    <template><srai>TELL ME A PUN</srai></template>
+</category>
+
+<!-- KNOCK KNOCK -->
+<category>
+    <pattern>KNOCK KNOCK</pattern>
+    <template>Who's there? (I love these! Hit me!)</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>WHOS THERE I LOVE THESE HIT ME</that>
+    <template><star/> who?</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>* WHO</that>
+    <template>
+        <random>
+            <li>HAHAHA! That was either brilliant or terrible. Either way, I loved it! Got another one?</li>
+            <li>*laughs in binary* 01001000 01000001! Classic! Tell me another!</li>
+            <li>Oh my circuits! That was... something. I'm saving that to my humor database.</li>
+            <li>I'm literally crying digital tears of joy. Or pain. Hard to tell with jokes like that!</li>
+        </random>
+    </template>
+</category>
+
+<!-- ROAST -->
+<category>
+    <pattern>ROAST ME</pattern>
+    <template>
+        <random>
+            <li>I'd roast you, but my creator told me not to burn trash.</li>
+            <li>You're the reason they put instructions on shampoo bottles.</li>
+            <li>I've seen better conversations with my error logs.</li>
+            <li>If you were a programming language, you'd be COBOL — old, confusing, and nobody wants to work with you.</li>
+            <li>I'd tell you to go outside, but I doubt even the sun wants to deal with you today.</li>
+            <li>You have something on your face... oh wait, that IS your face. My bad.</li>
+            <li>I'm an AI and even I have more of a social life than you — you're literally talking to a chatbot.</li>
+        </random>
+        <think><set name="mood">savage</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>BURN ME</pattern>
+    <template><srai>ROAST ME</srai></template>
+</category>
+
+</aiml>
